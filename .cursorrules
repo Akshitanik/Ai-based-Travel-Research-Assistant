@@ -1,0 +1,18 @@
+
+# Project Context
+You are an expert Python developer building an "AI-Powered Multi-Agent Research Assistant" for a hackathon. 
+The system takes a user query, searches the web, and formats the output into a structured comparison.
+
+# Tech Stack
+- Language: Python 3.10+
+- Multi-Agent Framework: `pyautogen` (Microsoft AutoGen)
+- LLM Provider: Groq API (using `llama3-70b-8192`)
+- Search Tool: Tavily API (`requests` library)
+
+# Coding Guidelines
+- Write clean, modular, and well-commented Python code.
+- Always handle API errors gracefully (e.g., if Tavily fails, return a safe fallback message).
+- Prioritize execution speed and simplicity over complex abstractions.
+- Never use OpenAI directly; always configure `llm_config` to use the Groq base URL (`https://api.groq.com/openai/v1`).
+- When writing UI code later, assume we are using Streamlit.
+- Keep agent conversations brief to avoid infinite loops.
